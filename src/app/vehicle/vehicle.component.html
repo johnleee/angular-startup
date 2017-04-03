@@ -1,1 +1,7 @@
-<b>hello</b>
+<h2>My Cars</h2>
+<ul class="cars">
+  <!-- selected = true for selected car, === is typesafe compare -->
+  <li *ngFor="let car of cars">
+    <b>{{car.id}}:</b> {{car.content}}
+  </li>
+</ul>
