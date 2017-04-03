@@ -16,15 +16,15 @@ const CARS: Vehicle[] = [
 })
 
 export class VehicleComponent {
-  public constructor(vehicleObserver: VehicleObserver, vehicleService: VehicleService){
-    vehicleObserver.attach(this)
+  public constructor(vehicleObserver: VehicleObserver, vehicleService: VehicleService) {
+    vehicleObserver.attach(this);
     vehicleService.initialize(vehicleObserver);
   }
   cars = CARS;
-  public setVehicle(vehicle: Vehicle){
+  public setVehicle(vehicle: Vehicle) {
     this.cars = [vehicle];
   }
-  public setVehicles(vehicles: Vehicle[]){
+  public setVehicles(vehicles: Vehicle[]) {
     this.cars = vehicles;
   }
 
